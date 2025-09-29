@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Greener For Better — Curated Luxury Lifestyle</title>
+  <meta name="description" content="Greener For Better — luxury inspiration with curated affiliate partners, exclusive routines and timeless living." />
+
+  <style>
+    :root {
+      --bg-dark:#0a0a0a;
+      --gold:#d4af37;
+      --accent-purple:#5b21b6;
+      --muted:rgba(255,255,255,0.65);
+      --max-w:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family: Inter, sans-serif;background:#080808;color:#fff;line-height:1.6;}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%;height:auto}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:999;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{width:60px;height:60px;border-radius:50%;border:2px solid var(--gold)}
+    .brand h1{font-size:16px;margin:0}
+    nav a{margin-left:14px;font-weight:600;padding:6px 10px;border-radius:8px;transition:.3s}
+    nav a:hover{background:var(--gold);color:#000}
+
+    main{max-width:var(--max-w);margin:auto;padding:20px}
+
+    /* Hero */
+    .hero{text-align:center;padding:60px 20px}
+    .hero h2{font-size:32px;font-weight:800;background:linear-gradient(90deg,var(--gold),var(--accent-purple));-webkit-background-clip:text;color:transparent;}
+    .hero p{color:var(--muted);max-width:600px;margin:10px auto}
+    .btn{padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer;border:0}
+    .btn-primary{background:var(--gold);color:#000;margin:10px}
+    .btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold);margin:10px}
+
+    /* Partner Grid */
+    .partners{margin:40px 0}
+    .partners h3{text-align:center;font-size:24px;margin-bottom:20px}
+    .partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .partner-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:18px;transition:.3s}
+    .partner-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+    .partner-card h4{margin:10px 0;font-size:18px}
+    .partner-card p{font-size:14px;color:var(--muted)}
+    .partner-card a{display:inline-block;margin-top:10px;padding:8px 12px;background:var(--gold);color:#000;border-radius:8px;font-weight:600}
+
+    /* Gallery */
+    .luxury-gallery{margin:50px 0}
+    .luxury-gallery h3{text-align:center;font-size:24px;margin-bottom:20px}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .gallery-grid img{height:240px;object-fit:cover;border-radius:12px;transition:.3s;box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+    .gallery-grid img:hover{transform:scale(1.05)}
+
+    /* About */
+    .about{margin:50px 0;padding:30px;border-radius:12px;background:rgba(255,255,255,0.02)}
+    .about h3{margin-top:0}
+    .about p{color:var(--muted)}
+
+    /* Waitlist */
+    .waitlist{text-align:center;margin:50px 0}
+    .waitlist input{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:#111;color:#fff;min-width:220px}
+    .waitlist button{padding:10px 14px;margin-left:8px;border:0;border-radius:8px;background:var(--gold);color:#000;font-weight:700}
+
+    /* Footer */
+    footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid rgba(255,255,255,0.1)}
+    footer small{display:block;margin-top:8px;font-size:12px}
+    .socials{margin:14px 0;display:flex;justify-content:center;gap:22px;align-items:center}
+    .socials a img{width:32px;transition:0.3s}
+    .socials a:hover img{filter:sepia(1) hue-rotate(10deg) saturate(10);}
+    .follow-text{margin-bottom:12px;font-size:15px;font-weight:600;color:var(--gold);animation:pulse 2s infinite}
+    @keyframes pulse {0%{opacity:1}50%{opacity:0.6}100%{opacity:1}}
+    
+    /* Language selector */
+    .lang-select{position:absolute;top:14px;right:14px;background:#111;color:#fff;border:1px solid var(--gold);border-radius:8px;padding:6px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7f5b6?w=100&h=100&fit=crop" alt="Greener For Better">
+    <h1 data-translate="brandName">Greener For Better</h1>
+  </div>
+  <nav>
+    <a href="#partners" data-translate="navPartners">Partners</a>
+    <a href="#gallery" data-translate="navGallery">Gallery</a>
+    <a href="#about" data-translate="navAbout">About</a>
+    <a href="#waitlist" data-translate="navJoin">Join</a>
+  </nav>
+  <!-- Language Switcher -->
+  <select id="languageSwitcher" class="lang-select">
+    <option value="en">EN</option>
+    <option value="fr">FR</option>
+    <option value="es">ES</option>
+  </select>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <h2 data-translate="heroTitle">Live The 2% Lifestyle</h2>
+    <p data-translate="heroSubtitle">Curated routines, exclusive partners, and timeless inspiration. Luxury that inspires, not promises.</p>
+    <a href="#waitlist"><button class="btn btn-primary" data-translate="btnJoin">Join The Circle</button></a>
+    <a href="#partners"><button class="btn btn-outline" data-translate="btnExplore">Explore Partners</button></a>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners" id="partners">
+    <h3 data-translate="partnerTitle">Featured Partners</h3>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <h4>VideoGen (AI Video)</h4>
+        <p data-translate="partner1Desc">AI-generated cinematic videos for storytelling, ads, and luxury branding.</p>
+        <a href="https://videogen.io?fpr=brian37" target="_blank" data-translate="partnerLink">Explore →</a>
+      </div>
+      <div class="partner-card">
+        <h4 data-translate="partner2Title">Luxury Watches</h4>
+        <p data-translate="partner2Desc">Discover curated watch collections — exclusive drops and timeless pieces.</p>
+        <a href="YOUR_AFFILIATE_LINK" target="_blank" data-translate="partnerLink">Shop Now →</a>
+      </div>
+      <div class="partner-card">
+        <h4 data-translate="partner3Title">Elite Travel</h4>
+        <p data-translate="partner3Desc">Exclusive travel experiences tailored for the refined traveler.</p>
+        <a href="YOUR_AFFILIATE_LINK" target="_blank" data-translate="partnerLink">Book Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="luxury-gallery" id="gallery">
+    <h3 data-translate="galleryTitle">Luxury Moments</h3>
+    <div class="gallery-grid">
+      <img src="https://i.pinimg.com/736x/6a/4f/2e/6a4f2e65b36a3b6f.jpg" alt="Pinterest luxury" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80" alt="Luxury travel" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Luxury vibes" loading="lazy">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h3 data-translate="aboutTitle">About Us</h3>
+    <p data-translate="aboutDesc"><strong>Greener For Better</strong> is a vault of inspiration from 25+ years of luxury knowledge. We curate tools, partners, and timeless experiences for those who value quality, taste, and truth. Not financial advice — just refined living, responsibly shared.</p>
+  </section>
+
+  <!-- Waitlist -->
+  <section class="waitlist" id="waitlist">
+    <h3 data-translate="waitlistTitle">Join Our Private Circle</h3>
+    <form onsubmit="return handleWaitlist(event)">
+      <input type="email" id="emailInput" data-translate-placeholder="placeholderEmail" placeholder="your@email.com" required>
+      <button type="submit" data-translate="btnApply">Apply</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p data-translate="footerText">© 2025 Greener For Better — Curated Excellence & Lifestyle</p>
+  <div class="follow-text" data-translate="followText">✨ Follow & Subscribe to get early drops and exclusives ✨</div>
+  <div class="socials">
+    <a href="https://www.instagram.com/cutest_green?igsh=ZWkyM3hlMmUwaXhn" target="_blank" aria-label="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/@Green_cutie" target="_blank" aria-label="YouTube">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+  </div>
+  <small data-translate="disclaimer">Disclaimer: This site uses affiliate links. Purchases made through them may earn us a commission, at no extra cost to you.</small>
+</footer>
+
+<script>
+  const translations = {
+    en:{
+      brandName:"Greener For Better", navPartners:"Partners", navGallery:"Gallery", navAbout:"About", navJoin:"Join",
+      heroTitle:"Live The 2% Lifestyle", heroSubtitle:"Curated routines, exclusive partners, and timeless inspiration. Luxury that inspires, not promises.",
+      btnJoin:"Join The Circle", btnExplore:"Explore Partners",
+      partnerTitle:"Featured Partners", partner1Desc:"AI-generated cinematic videos for storytelling, ads, and luxury branding.",
+      partner2Title:"Luxury Watches", partner2Desc:"Discover curated watch collections — exclusive drops and timeless pieces.",
+      partner3Title:"Elite Travel", partner3Desc:"Exclusive travel experiences tailored for the refined traveler.",
+      partnerLink:"Explore →",
+      galleryTitle:"Luxury Moments",
+      aboutTitle:"About Us", aboutDesc:"<strong>Greener For Better</strong> is a vault of inspiration from 25+ years of luxury knowledge. We curate tools, partners, and timeless experiences for those who value quality, taste, and truth. Not financial advice — just refined living, responsibly shared.",
+      waitlistTitle:"Join Our Private Circle", placeholderEmail:"your@email.com", btnApply:"Apply",
+      footerText:"© 2025 Greener For Better — Curated Excellence & Lifestyle", followText:"✨ Follow & Subscribe to get early drops and exclusives ✨",
+      disclaimer:"Disclaimer: This site uses affiliate links. Purchases made through them may earn us a commission, at no extra cost to you."
+    },
+    fr:{
+      brandName:"Greener For Better", navPartners:"Partenaires", navGallery:"Galerie", navAbout:"À propos", navJoin:"Rejoindre",
+      heroTitle:"Vivez le style de vie des 2%", heroSubtitle:"Routines choisies, partenaires exclusifs et inspiration intemporelle. Du luxe qui inspire, sans promesses.",
+      btnJoin:"Rejoindre le cercle", btnExplore:"Explorer les partenaires",
+      partnerTitle:"Partenaires en vedette", partner1Desc:"Vidéos cinématiques générées par IA pour le storytelling, la publicité et le branding de luxe.",
+      partner2Title:"Montres de luxe", partner2Desc:"Découvrez des collections de montres choisies — éditions exclusives et pièces intemporelles.",
+      partner3Title:"Voyages d’élite", partner3Desc:"Expériences de voyage exclusives adaptées au voyageur raffiné.",
+      partnerLink:"Découvrir →",
+      galleryTitle:"Moments de luxe",
+      aboutTitle:"À propos de nous", aboutDesc:"<strong>Greener For Better</strong> est un coffre d’inspiration basé sur plus de 25 ans de savoir-faire dans le luxe. Nous sélectionnons des outils, partenaires et expériences intemporelles pour ceux qui valorisent la qualité, le goût et la vérité.",
+      waitlistTitle:"Rejoignez notre cercle privé", placeholderEmail:"votre@email.com", btnApply:"Postuler",
+      footerText:"© 2025 Greener For Better — Excellence et style de vie raffinés", followText:"✨ Suivez & Abonnez-vous pour recevoir les nouveautés exclusives ✨",
+      disclaimer:"Clause de non-responsabilité : ce site utilise des liens d’affiliation. Les achats effectués via ces liens peuvent nous rapporter une commission, sans frais supplémentaires pour vous."
+    },
+    es:{
+      brandName:"Greener For Better", navPartners:"Socios", navGallery:"Galería", navAbout:"Acerca de", navJoin:"Unirse",
+      heroTitle:"Vive el estilo de vida del 2%", heroSubtitle:"Rutinas seleccionadas, socios exclusivos e inspiración atemporal. Lujo que inspira, no promesas.",
+      btnJoin:"Únete al círculo", btnExplore:"Explorar socios",
+      partnerTitle:"Socios destacados", partner1Desc:"Videos cinematográficos generados por IA para narración, anuncios y branding de lujo.",
+      partner2Title:"Relojes de lujo", partner2Desc:"Descubre colecciones de relojes seleccionadas — lanzamientos exclusivos y piezas atemporales.",
+      partner3Title:"Viajes de élite", partner3Desc:"Experiencias de viaje exclusivas adaptadas al viajero refinado.",
+      partnerLink:"Explorar →",
+      galleryTitle:"Momentos de lujo",
+      aboutTitle:"Sobre nosotros", aboutDesc:"<strong>Greener For Better</strong> es una bóveda de inspiración de más de 25 años de conocimiento en lujo. Seleccionamos herramientas, socios y experiencias atemporales para quienes valoran la calidad, el gusto y la verdad.",
+      waitlistTitle:"Únete a nuestro círculo privado", placeholderEmail:"tu@email.com", btnApply:"Aplicar",
+      footerText:"© 2025 Greener For Better — Excelencia y estilo de vida refinado", followText:"✨ Sigue & Suscríbete para recibir lanzamientos exclusivos ✨",
+      disclaimer:"Aviso: Este sitio utiliza enlaces de afiliados. Las compras realizadas a través de ellos pueden generarnos una comisión, sin costo adicional para ti."
+    }
+  };
+
+  const switcher=document.getElementById('languageSwitcher');
+  switcher.addEventListener('change',()=>applyTranslations(switcher.value));
+
+  function applyTranslations(lang){
+    const dict=translations[lang];
+    document.querySelectorAll('[data-translate]').forEach(el=>{
+      el.innerHTML=dict[el.getAttribute('data-translate')]||el.innerHTML;
+    });
+    document.querySelectorAll('[data-translate-placeholder]').forEach(el=>{
+      el.placeholder=dict[el.getAttribute('data-translate-placeholder')]||el.placeholder;
+    });
+  }
+
+  function handleWaitlist(e){
+    e.preventDefault();
+    const email=document.getElementById('emailInput').value;
+    alert("🔥 Thanks "+email+" — you’re on the early drops list!");
+    e.target.reset();
+    return false;
+  }
+</script>
+</body>
+</html>
